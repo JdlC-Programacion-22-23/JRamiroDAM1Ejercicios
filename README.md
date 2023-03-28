@@ -1,2 +1,2 @@
 # DAM1Ejercicios
-Ejercicios DAM1
+Estos Son todos los ejercicios de la 3º Evaluacion en adelante
