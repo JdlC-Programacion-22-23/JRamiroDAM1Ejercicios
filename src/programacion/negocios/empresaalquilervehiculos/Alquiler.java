@@ -5,7 +5,6 @@ public class Alquiler extends AbstractAlquiler {
 
   public Alquiler(AbstractCliente cliente, AbstractVehiculoAlquiler vehiculo) {
     super(cliente, vehiculo);
-    //TODO Auto-generated constructor stub
   }
 
   @Override
@@ -17,14 +16,12 @@ public class Alquiler extends AbstractAlquiler {
 
   @Override
   void comenzarAlquiler() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'comenzarAlquiler'");
+    inicioAlquiler=new Date();
   }
 
   @Override
   void terminarAlquiler() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'terminarAlquiler'");
+    finAlquiler=new Date();
   }
 
 }

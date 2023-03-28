@@ -1,12 +1,13 @@
 package programacion.negocios.empresaalquilervehiculos;
 
 public class Turismo extends AbstractVehiculoAlquiler {
-  public Turismo(String matricula, String fabricante, String modelo, float tarifaDiaria, int i, boolean b) {
-    super(matricula, fabricante, modelo, tarifaDiaria);
-    //TODO Auto-generated constructor stub
-  }
-  int numeroPuertas;
+  int numeroPuertas; 
   boolean cambioAutomatico;
+  public Turismo(String matricula, String fabricante, String modelo, float tarifaDiaria, int numeroPuertas, boolean cambioAutomatico) {
+    super(matricula, fabricante, modelo, tarifaDiaria);
+    this.numeroPuertas=numeroPuertas;
+    this.cambioAutomatico=cambioAutomatico;
+  }
   @Override
   public String toString() {
     return String.format("%8s %-15s %.2f€/día (%d puertas, cambio %s) ",

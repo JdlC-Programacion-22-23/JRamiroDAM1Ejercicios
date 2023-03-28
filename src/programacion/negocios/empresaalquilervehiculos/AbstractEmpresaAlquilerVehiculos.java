@@ -19,5 +19,4 @@ abstract public class AbstractEmpresaAlquilerVehiculos {
 
   @Override
   abstract public String toString();
-
 }

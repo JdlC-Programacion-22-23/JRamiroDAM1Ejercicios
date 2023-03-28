@@ -64,21 +64,16 @@ public class EmpresaAlquilerVehiculos extends AbstractEmpresaAlquilerVehiculos
   public void alquilarVehiculo(ClienteParticular alan, Turismo kiaCeed) {
   }
 
-  @Override
   public boolean devolverVehiculo(AbstractVehiculoAlquiler vehiculo) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'devolverVehiculo'");
+    return false;
+  
   }
-
-  @Override
   public boolean registrarCliente(ClienteParticular fer) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'registrarCliente'");
-  }
+    return false;
 
-  @Override
+  }
   public boolean registrarVehiculo(AbstractVehiculoAlquiler vehiculo) {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'registrarVehiculo'");
+    return false;
+
   }
 }
