@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 import programacion.Pruebas.*;
+import java.util.ArrayList;
 
 public class mainPruebas {
     private static String Resultado = "";
@@ -57,6 +58,11 @@ public class mainPruebas {
             int numeroElegido=in.nextInt();
                 String mayor=(numeroElegido>1)?"Es mayor":"Es menor";
             }
-            
+
+            /*Para un ArrayList necesitamos primero importarlo, despues tienes que inicializarlo de esta manera:
+             * ArrayList<tipoDeArrayList> NombreArrayList= new ArrayList<tipoDeArrayList>();
+             * Vamos a llamar a la funcion ejemploArrayList
+             */
+            PedidaCompleja.pConCompleja();
         }
     }
