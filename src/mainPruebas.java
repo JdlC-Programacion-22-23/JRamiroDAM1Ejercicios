@@ -47,7 +47,7 @@ public class mainPruebas {
              * datos para usarlos en su clase
              */
             System.out.println(pruebas1.pruebas12String(Resultado));
-            pruebas1 pruebame=new pruebas1();
+            pruebas1 pruebame = new pruebas1();
 
             /*
              * Los Elementos terniarios son un tipo de elemntos capaces de probar una
@@ -55,14 +55,16 @@ public class mainPruebas {
              * un if
              */
             System.out.println("elige un numero");
-            int numeroElegido=in.nextInt();
-                String mayor=(numeroElegido>1)?"Es mayor":"Es menor";
-            }
-
-            /*Para un ArrayList necesitamos primero importarlo, despues tienes que inicializarlo de esta manera:
-             * ArrayList<tipoDeArrayList> NombreArrayList= new ArrayList<tipoDeArrayList>();
-             * Vamos a llamar a la funcion ejemploArrayList
-             */
-            PedidaCompleja.pConCompleja();
+            int numeroElegido = in.nextInt();
+            String mayor = (numeroElegido > 1) ? "Es mayor" : "Es menor";
         }
+
+        /*
+         * En este ejemplo que pido unos datos y luego los retorno hago uso del metodo
+         * toString(), el metodo toString es un metodo el cual retorna siempre una
+         * cadena de caracteres y puedes llamar a las variables, metodos que necesites
+         * que estén en public y con el paquete importado dentro de la clase
+         */
+        PedidaCompleja.pConCompleja();
     }
+}
