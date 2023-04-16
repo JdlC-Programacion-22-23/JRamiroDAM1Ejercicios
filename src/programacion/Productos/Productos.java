@@ -1,10 +1,11 @@
 package programacion.Productos;
-import java.util.Scanner;
 public abstract class Productos {
     String nombre;
     int fechaCaducidad;
     int numeroLote;
-    public Productos(String nombre, int fechaCaducidad2, int numeroLote) {
+    int minLote=400;
+    int maxLote=900;
+    public Productos(String nombre, int fechaCaducidad, int numeroLote) {
     }
     @Override
     public String toString() {
