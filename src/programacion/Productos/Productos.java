@@ -1,10 +1,19 @@
 package programacion.Productos;
-import programacion.Productos.*;
-import java.util.Date;
 import java.util.Scanner;
-public class Productos {
-    public static void productos(){
-        Date fechaCaducidad;
-        int numeroLote;
+public abstract class Productos {
+    String nombre;
+    int fechaCaducidad;
+    int numeroLote;
+    public Productos(String nombre, int fechaCaducidad2, int numeroLote) {
+    }
+    @Override
+    public String toString() {
+        return "nombre: " + nombre + " " + "fechaCaducidad es " + fechaCaducidad + " " + "Su numero de lote es "
+                + numeroLote;
+    }
+    public void setDatos(String Nombre, int fechaCaducidad, int numeroLote) {
+        this.nombre = Nombre;
+        this.fechaCaducidad = fechaCaducidad;
+        this.numeroLote = numeroLote;
     }
 }
