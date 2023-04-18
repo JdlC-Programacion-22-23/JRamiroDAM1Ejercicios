@@ -7,12 +7,13 @@ import java.io.IOException;
 public class ProductoFresco extends Producto {
   String paisOrigen;
   String fechaEnvasado;
+  public static final String NOMBRE_FICHERO_CSV = "ProductosFrescos.csv";
 
   public ProductoFresco(String nombre, int fechaCaducidad, int numeroLote) {
     super(nombre, fechaCaducidad, numeroLote);
   }
 
-  public ProductoFresco(){
+  public ProductoFresco() {
     super();
   }
 
@@ -21,28 +22,29 @@ public class ProductoFresco extends Producto {
     this.paisOrigen = paisOrigen;
   }
 
-  /*public boolean comprobarEntradasCorrectas() {
-    if (nombre.isEmpty()) {
-      return false;
-    }
-
-    if (fechaCaducidad != 0) {
-      return false;
-    }
-
-    if (fechaEnvasado != 0) {
-      return false;
-    }
-    if (numeroLote < minLote && numeroLote > maxLote) {
-      return false;
-    }
-    if (fechaEnvasado > fechaCaducidad) {
-      return false;
-    }
-
-    return true;
-  }
-  */
+  /*
+   * public boolean comprobarEntradasCorrectas() {
+   * if (nombre.isEmpty()) {
+   * return false;
+   * }
+   * 
+   * if (fechaCaducidad != 0) {
+   * return false;
+   * }
+   * 
+   * if (fechaEnvasado != 0) {
+   * return false;
+   * }
+   * if (numeroLote < minLote && numeroLote > maxLote) {
+   * return false;
+   * }
+   * if (fechaEnvasado > fechaCaducidad) {
+   * return false;
+   * }
+   * 
+   * return true;
+   * }
+   */
 
   @Override
   public String toString() {
@@ -50,13 +52,14 @@ public class ProductoFresco extends Producto {
         + paisOrigen;
   }
 
-  public boolean escribirCabecera(FileWriter escritor) throws IOException{
-      escritor.write("nombre,fechaCaducidad,numeroLote,fechaEnvasado,paisOrigen\n");
+  public static void escribirCabecera(FileWriter escritor) throws IOException {
+    escritor.write("nombre,fechaCaducidad,numeroLote,fechaEnvasado,paisOrigen\n");
+  }
+
+  @Override
+  public boolean escribirProducto(FileWriter escritor) throws IOException {
+    escritor.write(nombre + "," + fechaCaducidad + "," + numeroLote + "," + fechaEnvasado + "," + paisOrigen + "\n");
     return true;
   }
-  public boolean escribirProducto(FileWriter escritor) throws IOException{
-    escritor.write(nombre + "," + fechaCaducidad + "," + numeroLote + "," + fechaEnvasado + "," + paisOrigen + "\n" );
-  return true;
-}
 
 }

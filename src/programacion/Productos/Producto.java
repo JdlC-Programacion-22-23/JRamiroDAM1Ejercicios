@@ -28,6 +28,5 @@ public abstract class Producto {
         this.fechaCaducidad = fechaCaducidad;
         this.numeroLote = numeroLote;
     }
-    public abstract boolean escribirCabecera(FileWriter escritor) throws IOException;
     public abstract boolean escribirProducto(FileWriter escritor) throws IOException;
 }

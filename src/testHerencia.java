@@ -40,6 +40,8 @@ public class testHerencia {
         System.out.println("1. Registrar Productos frescos");
         System.out.println("2) Registrar Productos refrigerados");
         System.out.println("3) Registrar Productos Congelados");
+        System.out.println("4) Escribir a disco");
+        System.out.println("5) Cargar de disco");
         opciones = entrada.nextLine();
         switch (opciones) {
           case "1":
@@ -99,7 +101,9 @@ public class testHerencia {
             FileWriter escritor = null;
 
             try {
-              escritor = new FileWriter("ProductosFrescos.csv");
+              escritor = new FileWriter(ProductoFresco.NOMBRE_FICHERO_CSV);
+              ProductoFresco.escribirCabecera(escritor);
+
               for (int i = 0; i < arrayProductosFrescos.size(); i++) {
                 if (i == 0) {
                   arrayProductosFrescos.get(i).escribirCabecera(escritor);
