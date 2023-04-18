@@ -1,6 +1,6 @@
-package programacion.Productos;
+package programacion.productos;
 
-public class productosRefrigerados extends Productos{
+public class productosRefrigerados extends Producto{
     int fEnvasadoRefrigerado=0;
     String pOrigen="";
     public productosRefrigerados(String nombre, int fechaCaducidad, int numeroLote) {
