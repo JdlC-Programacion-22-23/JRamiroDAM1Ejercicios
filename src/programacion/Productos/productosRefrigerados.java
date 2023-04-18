@@ -14,8 +14,8 @@ public class productosRefrigerados extends Productos{
 
     public boolean EntradasCorrectas(){
         if (nombre.isEmpty()) return false;
-        else if (fechaCaducidad!=0)return false;
-        else if(fEnvasadoRefrigerado!=0)return false;
+        else if (fechaCaducidad==0)return false;
+        else if(fEnvasadoRefrigerado==0)return false;
         else if (numeroLote<minLote && numeroLote>maxLote) return false;
         else if(fEnvasadoRefrigerado>fechaCaducidad)return false;
         else return true;

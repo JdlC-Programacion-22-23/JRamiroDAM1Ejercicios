@@ -14,8 +14,8 @@ public class productosFrescos extends Productos{
     }
     public boolean EntradasCorrectas(){
         if (nombre.isEmpty()) return false;
-        else if (fechaCaducidad!=0)return false;
-        else if(fEnvasadoFresco!=0)return false;
+        else if (fechaCaducidad==0)return false;
+        else if(fEnvasadoFresco==0)return false;
         else if (numeroLote<minLote && numeroLote>maxLote) return false;
         else if(fEnvasadoFresco>fechaCaducidad)return false;
         else return true;

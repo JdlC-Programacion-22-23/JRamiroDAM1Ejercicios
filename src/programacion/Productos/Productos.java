@@ -3,8 +3,8 @@ public abstract class Productos {
     String nombre;
     int fechaCaducidad;
     int numeroLote;
-    int minLote=400;
-    int maxLote=900;
+    int minLote=0;
+    int maxLote=1000;
     public Productos(String nombre, int fechaCaducidad, int numeroLote) {
     }
     @Override
